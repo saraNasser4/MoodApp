@@ -81,11 +81,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MoodApp\\MoodApp.Server\\MoodApp.Server.csproj",
+      "projectUniqueName": "D:\\MoodApp\\server\\MoodApp.Server.csproj",
       "projectName": "MoodApp.Server",
-      "projectPath": "D:\\MoodApp\\MoodApp.Server\\MoodApp.Server.csproj",
+      "projectPath": "D:\\MoodApp\\server\\MoodApp.Server.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\MoodApp\\MoodApp.Server\\obj\\",
+      "outputPath": "D:\\MoodApp\\server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

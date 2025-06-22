@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P6tpTK1XOfc=",
+  "dgSpecHash": "w4JTDU6ErAc=",
   "success": true,
-  "projectFilePath": "D:\\MoodApp\\MoodApp.Server\\MoodApp.Server.csproj",
+  "projectFilePath": "D:\\MoodApp\\server\\MoodApp.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
