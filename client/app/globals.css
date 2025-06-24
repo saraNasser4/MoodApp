@@ -9,8 +9,8 @@
 } 
 
 @theme { 
-  --color-background: var(--foreground); 
-  --color-text: var(--background); 
+  --color-background: var(--background); 
+  --color-text: var(--foreground); 
   --color-primary: var(--primary); 
   --color-secondary: var(--secondary); 
   --color-accent: var(--accent); 
