@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MoodApp.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26d2806c7d87f540ba7dc03f3e00c058111718a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0704f40ffd5fcbe79a541e21d979bd2d61d688ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("MoodApp.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MoodApp.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
