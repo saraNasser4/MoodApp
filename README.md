@@ -15,3 +15,7 @@ the Important more than the tracker is the style of the tracker so started first
 ## Make the Form separate
 
 I realized I had to separate the form with its input to store its value so I could be able to send it to the server and done 
+
+## Post the data to the api
+
+I made a try and catch scope for the client part first havn't dug in the server yet

@@ -9,13 +9,28 @@ export default function FromComp() {
         setInputValue(e?.target?.value);
     }
     
-    const handleSubmit = (e: FormEvent)=> {
+    const handleSubmit =  async(e: FormEvent)=> {
         e.preventDefault();
-        // try {
-        //     const res =
-        // }catch (err) {
-        //     console.error("something went wrong",err);
-        // }
+        try {
+            const data = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ mood: inputValue }),
+            };
+
+            const response = await fetch("http://localhost:5065", data);
+            
+            if(response.ok) {
+                setInputValue("")
+            } else {
+                throw new Error("Error saving mood!")
+            }
+            console.log(response.ok)
+        }catch (err) {
+            console.error("something went wrong",err);
+        }
     }
 
     useEffect(()=> console.log(inputValue), [inputValue])
