@@ -19,3 +19,7 @@ I realized I had to separate the form with its input to store its value so I cou
 ## Post the data to the api
 
 I made a try and catch scope for the client part first havn't dug in the server yet
+
+## Adding a loading state
+
+Thought it would be better to add state to manage the loading to make the best user experience
