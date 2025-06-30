@@ -23,3 +23,7 @@ I made a try and catch scope for the client part first havn't dug in the server 
 ## Adding a loading state
 
 Thought it would be better to add state to manage the loading to make the best user experience
+
+## Make the server part gets the data
+
+I've started with making a models contains the types and after that made the context part so I had to install sql from entityframwork and applied them in the program.cs

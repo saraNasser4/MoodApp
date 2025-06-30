@@ -52,6 +52,7 @@ export default function FromComp() {
             {isLoading && <span className="bg-accent/30 w-full h-full absolute z-50">
                 <div className="size-5 animate-spin w-10 h-10 border-4 border-t-transparent border-secondary rounded-full absolute top-1/2 left-1/2 -translate-1/2"></div>
             </span>}
+            
             <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col gap-4 mx-auto relative">
                 <label htmlFor="moodAsk" className="font-bold text-3xl mb-8 -mt-8">How do you feel today?</label>
                 <div>
