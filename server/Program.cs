@@ -9,6 +9,7 @@ builder.Services.AddDbContext<MoodContext>(options =>
 
 builder.Services.AddCors(options =>
 {
+    Console.WriteLine(options);
     options.AddPolicy("reactFrontend", policy =>
     {
         policy.WithOrigins("http://localhost:3000")

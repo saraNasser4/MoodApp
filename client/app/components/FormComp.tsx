@@ -4,7 +4,6 @@ import { ChangeEvent, FormEvent, useEffect, useState } from "react"
 
 export default function FromComp() {
     const [inputValue, setInputValue] = useState('');
-    const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<null | string>(null);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -16,7 +15,6 @@ export default function FromComp() {
         e.preventDefault();
         if(!inputValue.trim()) return;
 
-        setIsSubmitting(true);
         setError(null);
         setIsLoading(true)
 
@@ -29,19 +27,20 @@ export default function FromComp() {
                 body: JSON.stringify({ mood: inputValue }),
             };
 
-            const response = await fetch(`http://localhost${process.env.BACKEND_PORT || '5065'}/api/mood`, data);
+            const response = await fetch(`http://localhost:${process.env.BACKEND_PORT || '5065'}/api/mood/`, data);
             
             if(!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Error saving mood!")
             }
+            const result = await response.json();
+            console.log("Mood saved", result)
 
             setInputValue("")
         }catch (err) {
             console.error("something went wrong",err);
             setError(err instanceof Error ? err.message : "Failed to save mood")
         } finally {
-            setIsSubmitting(false);
             setIsLoading(false);
         }
     }
@@ -57,7 +56,7 @@ export default function FromComp() {
                 <label htmlFor="moodAsk" className="font-bold text-3xl mb-8 -mt-8">How do you feel today?</label>
                 <div>
                     <input type="text" value={inputValue} placeholder="Enter your mood body..." onChange={(e) => handleChange(e)} id="moodAsk" className="bg-white rounded-l-3xl px-3 py-4 text-background font-medium outline-none" />
-                    <button type="submit" disabled={isSubmitting} className="rounded-e-3xl px-3 py-4 bg-secondary text-text font-semibold cursor-pointer hover:bg-accent duration-300 disabled:cursor-">Mood</button>
+                    <button type="submit" className="rounded-e-3xl px-3 py-4 bg-secondary text-text font-semibold cursor-pointer hover:bg-accent duration-300 disabled:cursor-">Mood</button>
                 </div>
                 {error && <p className="absolute text-red-500 -bottom-10">{error}</p>}
             </form>
