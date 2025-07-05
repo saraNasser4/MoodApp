@@ -27,3 +27,7 @@ Thought it would be better to add state to manage the loading to make the best u
 ## Make the server part gets the data
 
 I've started with making a models contains the types and after that made the context part so I had to install sql from entityframwork and applied them in the program.cs
+
+## Adding Error handling in program.cs
+
+Thought it would be better to handle some error from program.cs so I do know which part causing the problem in the future and done.

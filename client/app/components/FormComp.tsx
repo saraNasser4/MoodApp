@@ -27,21 +27,21 @@ export default function FromComp() {
                 body: JSON.stringify({ mood: inputValue }),
             };
 
-            const response = await fetch(`http://localhost:${process.env.BACKEND_PORT || '5065'}/api/mood/`, data);
+            const response = await fetch(`http://localhost:${process.env.BACKEND_PORT?.toString() || '5065'}/api/mood/`, data);
             
             if(!response.ok) {
                 const errorData = await response.json();
-                throw new Error(errorData.message || "Error saving mood!")
+                throw new Error(errorData.message || "Error saving mood")
             }
             const result = await response.json();
             console.log("Mood saved", result)
 
-            setInputValue("")
         }catch (err) {
             console.error("something went wrong",err);
             setError(err instanceof Error ? err.message : "Failed to save mood")
         } finally {
             setIsLoading(false);
+            setInputValue("");
         }
     }
 
